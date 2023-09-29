@@ -1,11 +1,13 @@
 import { createGlobalStyle } from "styled-components";
+import { theme } from "@/styles/Theme";
 
 export const GlobalStyle = createGlobalStyle`
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: sans-serif;
   -webkit-font-smoothing: antialiased;
   -webkit-tap-highlight-color: transparent;
+  background: ${theme.colors.background};
 }
 
 * {
