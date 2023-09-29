@@ -1,5 +1,4 @@
 import { createGlobalStyle } from "styled-components";
-import { theme } from "@/styles/Theme";
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -7,7 +6,7 @@ body {
   font-family: sans-serif;
   -webkit-font-smoothing: antialiased;
   -webkit-tap-highlight-color: transparent;
-  background: ${theme.colors.background};
+  background: ${({ theme }) => theme.colors.background};
 }
 
 * {
