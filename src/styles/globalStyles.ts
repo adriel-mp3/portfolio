@@ -7,6 +7,21 @@ body {
   -webkit-font-smoothing: antialiased;
   -webkit-tap-highlight-color: transparent;
   background: ${({ theme }) => theme.colors.background};
+  font-family: "Fira Sans";
+}
+
+body::before {
+  z-index: -1;
+  filter:${({ theme }) =>
+    `drop-shadow(20px -20px 10px ${theme.colors["accent-100"]}) blur(300px)`} ;
+  display: block;
+  content: '';
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  background: ${({ theme }) => theme.colors["accent-100"]};
+  top: 200px;
+  left: -200px;
 }
 
 * {
