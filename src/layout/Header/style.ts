@@ -5,8 +5,8 @@ export const Container = styled.header`
   justify-content: space-between;
   align-items: center;
   max-width: 1600px;
-  margin: 0 auto;
-  padding: ${({ theme }) => theme.spacing["2xl"]};
+  margin: 40px auto 120px auto;
+  padding: 0 ${({ theme }) => theme.spacing["2xl"]};
 
   span {
     color: ${({ theme }) => theme.colors["neutral-100"]};
