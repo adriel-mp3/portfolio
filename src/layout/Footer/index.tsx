@@ -1,14 +1,10 @@
 import * as S from "./style";
-import socialNetworks from "@/utils/socialNetworks";
-import linkedinImg from "@/assets/linkedin-dark.svg";
-import githubImg from "@/assets/github-dark.svg";
-import inboxImg from "@/assets/inbox-dark.svg";
 import circle from "@/assets/circle-dec.svg";
 import { PrimaryButton } from "@/components/Button/PrimmaryButton/style";
+import SocialButtons from "@/components/Button/SocialButtons";
+import socialNetworks from "@/utils/socialNetworks";
 
 const Footer = () => {
-  const { github, linkedin, email } = socialNetworks;
-
   return (
     <S.Background>
       <S.Container>
@@ -19,23 +15,7 @@ const Footer = () => {
         </S.Contact>
         <S.Social>
           <img src={circle} />
-          <ul>
-            <li>
-              <a href={linkedin.link}>
-                <img src={linkedinImg} alt="" />
-              </a>
-            </li>
-            <li>
-              <a href={github.link}>
-                <img src={githubImg} alt="" />
-              </a>
-            </li>
-            <li>
-              <a href={email.address}>
-                <img src={inboxImg} alt="" />
-              </a>
-            </li>
-          </ul>
+          <SocialButtons socialNetworks={socialNetworks} variant="dark" />
         </S.Social>
       </S.Container>
     </S.Background>

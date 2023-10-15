@@ -1,11 +1,10 @@
 import React from "react";
 import * as S from "./style";
 import skills from "@/utils/skills";
-import github from "@/assets/github.svg";
-import linkedin from "@/assets/linkedin.svg";
-import inbox from "@/assets/inbox.svg";
 import scrollDown from "@/assets/scroll-down-circle.svg";
 import { Tag } from "../Tag/style";
+import SocialButtons from "../Button/SocialButtons";
+import socialNetworks from "@/utils/socialNetworks";
 
 const Hero = () => {
   return (
@@ -20,31 +19,7 @@ const Hero = () => {
               linguagem, biblioteca ou framework. Estou continuamente disposto a
               expandir meu conhecimento, abraçando novos desafios.
             </S.Paragraph>
-            <ul>
-              <li>
-                <a
-                  href="https://github.com/adriel-mp3"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img src={github} alt="Github icon" />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/adriel-santos-dev/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img src={linkedin} alt="Linkedin icon" />
-                </a>
-              </li>
-              <li>
-                <a href="mailto:contatoadrielsantos@hotmail.com">
-                  <img src={inbox} alt="Inbox icon" />
-                </a>
-              </li>
-            </ul>
+            <SocialButtons socialNetworks={socialNetworks} />
           </div>
         </S.Resume>
         <S.SideInfo>
