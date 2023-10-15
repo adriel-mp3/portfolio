@@ -1,11 +1,11 @@
 import React from "react";
 import * as S from "./style";
-import Tag from "@/components/Tag/index";
 import skills from "@/utils/skills";
 import github from "@/assets/github.svg";
 import linkedin from "@/assets/linkedin.svg";
 import inbox from "@/assets/inbox.svg";
 import scrollDown from "@/assets/scroll-down-circle.svg";
+import { Tag } from "../Tag/style";
 
 const Hero = () => {
   return (
@@ -59,7 +59,7 @@ const Hero = () => {
           <S.TitleSecondary>Conhecimento</S.TitleSecondary>
           <S.Skills>
             {skills.map((skill) => (
-              <Tag as="li" name={skill} />
+              <Tag as="li">{skill}</Tag>
             ))}
           </S.Skills>
         </S.SideInfo>
