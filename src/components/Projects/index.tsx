@@ -3,10 +3,12 @@ import * as S from "./style";
 
 import Tag from "../Tag";
 import projectsInfo from "@/utils/projectsInfo";
-import PrimaryButton from "../Button/PrimmaryButton";
-import UnderlineButton from "../Button/UnderlineButton";
+import socialNetworks from "@/utils/socialNetworks";
+import { PrimaryButton } from "../Button/PrimmaryButton/style";
+import { UnderlineButton } from "../Button/UnderlineButton/style";
 
 const Projects = () => {
+  const { github } = socialNetworks;
   return (
     <S.Container>
       <S.LabelSection>
@@ -26,32 +28,35 @@ const Projects = () => {
             <p>{project.description}</p>
             <S.Buttons>
               <PrimaryButton
-                label="Projeto"
                 as="a"
                 href={project.deploy}
                 target="_blank"
                 rel="noopener noreferrer"
-              />
+              >
+                Projeto
+              </PrimaryButton>
               <UnderlineButton
-                label="Repositorio"
                 as="a"
                 href={project.repository}
                 target="_blank"
                 rel="noopener noreferrer"
-              />
+              >
+                Repositório
+              </UnderlineButton>
             </S.Buttons>
           </S.Project>
         ))}
       </S.Projects>
       <S.ButtonWrapper>
         <UnderlineButton
-          label="Mais projetos"
           as="a"
-          href="https://github.com/adriel-mp3"
+          href={github.link}
           target="_blank"
           rel="noopener noreferrer"
-          size="large"
-        />
+          $size="large"
+        >
+          Mais projetos
+        </UnderlineButton>
       </S.ButtonWrapper>
     </S.Container>
   );
