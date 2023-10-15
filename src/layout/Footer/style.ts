@@ -23,7 +23,7 @@ export const Contact = styled.div`
   span {
     display: block;
     color: ${({ theme }) => theme.colors.background};
-    font-size: ${({theme}) => theme.fontSizes.lg};
+    font-size: ${({ theme }) => theme.fontSizes.lg};
     margin-top: ${({ theme }) => theme.spacing.lg};
   }
 `;
@@ -31,10 +31,5 @@ export const Contact = styled.div`
 export const Social = styled.div`
   & > img {
     margin-bottom: ${({ theme }) => theme.spacing.lg};
-  }
-
-  ul {
-    display: flex;
-    gap: ${({theme}) => theme.spacing.xl};
   }
 `;

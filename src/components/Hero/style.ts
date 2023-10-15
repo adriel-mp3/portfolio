@@ -43,19 +43,6 @@ export const Resume = styled.div`
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: center;
-
-    ul {
-      display: flex;
-      gap: ${({ theme }) => theme.spacing.xl};
-
-      li a > img {
-        transition: 0.3s;
-      }
-      li a > img:hover {
-        transform: translateY(-4px);
-        filter: brightness(120%);
-      }
-    }
   }
 `;
 
