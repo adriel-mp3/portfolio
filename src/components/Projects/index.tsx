@@ -1,14 +1,15 @@
 import React from "react";
 import * as S from "./style";
-
-import Tag from "../Tag";
-import projectsInfo from "@/utils/projectsInfo";
-import socialNetworks from "@/utils/socialNetworks";
+import { Tag } from "@/components/Tag/style";
 import { PrimaryButton } from "../Button/PrimmaryButton/style";
 import { UnderlineButton } from "../Button/UnderlineButton/style";
+import type { ProjectsInfoType } from "@/utils/projectsInfo";
 
-const Projects = () => {
-  const { github } = socialNetworks;
+type ProjectsType = {
+  projectsInfo: ProjectsInfoType[];
+};
+
+const Projects = ({ projectsInfo }: ProjectsType) => {
   return (
     <S.Container>
       <S.LabelSection>
@@ -18,13 +19,7 @@ const Projects = () => {
       <S.Projects>
         {projectsInfo.map((project) => (
           <S.Project>
-            <img src={project.img} />
             <h3>{project.name}</h3>
-            <ul>
-              {project.tags.map((tag) => (
-                <Tag name={tag} as="li" />
-              ))}
-            </ul>
             <p>{project.description}</p>
             <S.Buttons>
               <PrimaryButton
@@ -44,13 +39,17 @@ const Projects = () => {
                 Repositório
               </UnderlineButton>
             </S.Buttons>
+            <ul>
+              {project.tags.map((tag) => (
+                <Tag as="li">{tag}</Tag>
+              ))}
+            </ul>
           </S.Project>
         ))}
       </S.Projects>
       <S.ButtonWrapper>
         <UnderlineButton
           as="a"
-          href={github.link}
           target="_blank"
           rel="noopener noreferrer"
           $size="large"

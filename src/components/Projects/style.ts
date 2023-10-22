@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
-  max-width: 1600px;
+  max-width: 1440px;
   padding: 0 40px;
   margin: 120px auto 120px auto;
 
@@ -13,20 +13,20 @@ export const LabelSection = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: ${({theme}) => theme.spacing["4xl"]};
+  margin-bottom: ${({ theme }) => theme.spacing["4xl"]};
 
   h2 {
-    font-family: "Playfair Display";
+    font-family: "Poppins";
     font-size: ${({ theme }) => theme.fontSizes["3xl"]};
     color: ${({ theme }) => theme.colors["neutral-100"]};
     font-weight: ${({ theme }) => theme.fontWeights.regular};
-    line-height: 10rem;
+    line-height: 7.5rem;
   }
 
   p {
     font-size: ${({ theme }) => theme.fontSizes["2xl"]};
     color: ${({ theme }) => theme.colors["neutral-300"]};
-    padding-top: 50px;
+    padding-top: 20px;
   }
 `;
 
@@ -38,20 +38,11 @@ export const Projects = styled.div`
 `;
 
 export const Project = styled.div`
-  img {
-    max-width: 800px;
-    max-height: 400px;
-    border-radius: 9px;
-    object-fit: contain;
-    margin-bottom: ${({ theme }) => theme.spacing.md};
-    overflow: hidden;
-    opacity: 0.7;
-    transition: 0.3s;
-    
-    &:hover {
-      opacity: 1;
-    }
-  }
+  background: rgba(0, 84, 102, 0.05);
+  backdrop-filter: blur(20px);
+  padding: 40px;
+  border-radius: 7px;
+  box-shadow: 0px -px 4px 0px rgba(255, 255, 255, 0.05) inset;
 
   h3,
   ul,
@@ -60,7 +51,7 @@ export const Project = styled.div`
   }
 
   h3 {
-    font-family: "Playfair Display";
+    font-family: "Poppins";
     color: ${({ theme }) => theme.colors["neutral-300"]};
     font-size: ${({ theme }) => theme.fontSizes["2xl"]};
     line-height: ${({ theme }) => theme.fontSizes["2xl"]};
@@ -69,6 +60,7 @@ export const Project = styled.div`
 
   ul {
     display: flex;
+    flex-wrap: wrap;
     gap: ${({ theme }) => theme.spacing.sm};
   }
 
@@ -76,7 +68,6 @@ export const Project = styled.div`
     color: ${({ theme }) => theme.colors["neutral-500"]};
     line-height: 2.0625rem;
     font-size: ${({ theme }) => theme.fontSizes.base};
-    max-width: 50ch;
   }
 `;
 
@@ -84,6 +75,7 @@ export const Buttons = styled.div`
   display: flex;
   gap: ${({ theme }) => theme.spacing["2xl"]};
   align-items: center;
+  margin-bottom: 40px;
 `;
 
 export const ButtonWrapper = styled.div`
