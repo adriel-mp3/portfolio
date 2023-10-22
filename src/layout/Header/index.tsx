@@ -1,20 +1,24 @@
 import React from "react";
 import * as S from "./style";
+import { HeaderLinksType } from "@/utils/headerLinks";
+import Logo from "@/components/Logo";
 
-const Header = () => {
-  
+type HeaderProps = {
+  headerLinks: HeaderLinksType[];
+};
+
+const Header = ({ headerLinks }: HeaderProps) => {
   return (
     <S.Container>
-      <span>Adriel Santos</span>
+      <Logo href="#" />
       <nav>
-        <S.NavList>
-          <li>
-            <a href="#">Projetos</a>
-          </li>
-          <li>
-            <a href="#">Contato</a>
-          </li>
-        </S.NavList>
+        <S.NavLinks>
+          {headerLinks.map((link) => (
+            <li>
+              <a href={link.href}>{link.label}</a>
+            </li>
+          ))}
+        </S.NavLinks>
       </nav>
     </S.Container>
   );

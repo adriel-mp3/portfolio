@@ -2,9 +2,13 @@ import * as S from "./style";
 import circle from "@/assets/circle-dec.svg";
 import { PrimaryButton } from "@/components/Button/PrimmaryButton/style";
 import SocialButtons from "@/components/Button/SocialButtons";
-import socialNetworks from "@/utils/socialNetworks";
+import type { socialNetworksType } from "@/utils/socialNetworks";
 
-const Footer = () => {
+type FooterTypeProps = {
+  socialNetworks: socialNetworksType[];
+};
+
+const Footer = ({ socialNetworks }: FooterTypeProps) => {
   return (
     <S.Background>
       <S.Container>

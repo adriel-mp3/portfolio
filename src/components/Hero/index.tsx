@@ -1,26 +1,29 @@
 import React from "react";
 import * as S from "./style";
-import skills from "@/utils/skills";
 import scrollDown from "@/assets/scroll-down-circle.svg";
 import { Tag } from "../Tag/style";
 import SocialButtons from "../Button/SocialButtons";
-import socialNetworks from "@/utils/socialNetworks";
+import type { socialNetworksType } from "@/utils/socialNetworks";
+import type { SkillsType } from "@/utils/skills";
 
-const Hero = () => {
+type HeroPropsType = {
+  socialNetworks: socialNetworksType[];
+  skills: SkillsType;
+};
+
+const Hero = ({ socialNetworks, skills }: HeroPropsType) => {
   return (
     <>
       <S.Container>
         <S.Resume>
           <h1>Front-end</h1>
           <span>Developer</span>
-          <div>
-            <S.Paragraph>
-              Minha paixão reside na resolução de problemas, sem importar a
-              linguagem, biblioteca ou framework. Estou continuamente disposto a
-              expandir meu conhecimento, abraçando novos desafios.
-            </S.Paragraph>
-            <SocialButtons socialNetworks={socialNetworks} />
-          </div>
+          <S.Paragraph>
+            Minha paixão reside na resolução de problemas, sem importar a
+            linguagem, biblioteca ou framework. Estou continuamente disposto a
+            expandir meu conhecimento, abraçando novos desafios.
+          </S.Paragraph>
+          <SocialButtons socialNetworks={socialNetworks} />
         </S.Resume>
         <S.SideInfo>
           <S.TitleSecondary>Experiência</S.TitleSecondary>
@@ -34,7 +37,9 @@ const Hero = () => {
           <S.TitleSecondary>Conhecimento</S.TitleSecondary>
           <S.Skills>
             {skills.map((skill) => (
-              <Tag as="li">{skill}</Tag>
+              <Tag as="li" key={skill}>
+                {skill}
+              </Tag>
             ))}
           </S.Skills>
         </S.SideInfo>

@@ -1,18 +1,6 @@
 import React from "react";
 import * as S from "./style";
-
-type socialIconsType = {
-  dark: string;
-  light: string;
-};
-
-export type socialNetworksType = {
-  name: string;
-  link?: string;
-  icon: socialIconsType;
-  alt: string;
-  address?: string;
-};
+import type { socialNetworksType } from "@/utils/socialNetworks";
 
 type SocialButtonsVariants = "dark" | "light";
 
@@ -29,7 +17,9 @@ const SocialButtons = ({
     <S.Wrapper>
       {socialNetworks.map((network) => (
         <li key={network.name}>
-          <a href={network.link}>
+          <a
+            href={network.address ? `mailto:${network.address}` : network.link}
+          >
             <img src={network.icon[variant]} alt={network.alt} />
           </a>
         </li>

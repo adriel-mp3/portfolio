@@ -23,7 +23,7 @@ export const theme = {
     lg: "1.5rem",
     xl: "2.5rem",
     "2xl": "3rem",
-    "3xl": "10.625rem",
+    "3xl": "7.5rem",
   },
   fontWeights: {
     regular: 400,

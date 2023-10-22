@@ -53,6 +53,7 @@ const Projects = ({ projectsInfo }: ProjectsType) => {
           target="_blank"
           rel="noopener noreferrer"
           $size="large"
+          href="https://github.com/adriel-mp3"
         >
           Mais projetos
         </UnderlineButton>
