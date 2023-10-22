@@ -1,4 +1,12 @@
-const projectsInfo = [
+export type ProjectsInfoType = {
+  name: string;
+  description: string;
+  tags: string[];
+  repository: string;
+  deploy: string;
+};
+
+export const projectsInfo = [
   {
     name: "Revive Mart ",
     description:
@@ -31,7 +39,4 @@ const projectsInfo = [
     repository: "https://github.com/adriel-mp3/events",
     deploy: "",
   },
-  
-] as const;
-
-export default projectsInfo;
+] as ProjectsInfoType[];

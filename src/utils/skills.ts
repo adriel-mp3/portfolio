@@ -1,4 +1,6 @@
-const skills = [
+export type SkillsType = readonly string[];
+
+export const skills = [
   "React",
   "TypeScript",
   "Next.JS",
@@ -15,6 +17,4 @@ const skills = [
   "Storybook",
   "Jest",
   "Testing Library",
-] as const;
-
-export default skills;
+] as SkillsType;

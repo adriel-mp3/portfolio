@@ -5,7 +5,20 @@ import linkedinIconDark from "@/assets/linkedin-dark.svg";
 import githubIconDark from "@/assets/github-dark.svg";
 import inboxIconDark from "@/assets/inbox-dark.svg";
 
-const socialNetworks = [
+type socialIconsType = {
+  dark: string;
+  light: string;
+};
+
+export type socialNetworksType = {
+  name: string;
+  link?: string;
+  icon: socialIconsType;
+  alt: string;
+  address?: string;
+};
+
+export const socialNetworks = [
   {
     name: "github",
     link: "https://github.com/adriel-mp3",
@@ -33,5 +46,4 @@ const socialNetworks = [
     },
     alt: "Email Icon",
   },
-];
-export default socialNetworks;
+] as socialNetworksType[];
