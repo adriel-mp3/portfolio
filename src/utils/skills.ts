@@ -14,7 +14,7 @@ const skills = [
   "JavaScript",
   "Storybook",
   "Jest",
-  "React Testing Library",
+  "Testing Library",
 ] as const;
 
 export default skills;
