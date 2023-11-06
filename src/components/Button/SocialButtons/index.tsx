@@ -4,15 +4,15 @@ import * as S from "./style";
 
 type SocialButtonsVariants = "dark" | "light";
 
-type SocialButtonsType = {
+interface SocialButtonsProps {
   socialNetworks: socialNetworksType[];
   variant?: SocialButtonsVariants;
-};
+}
 
 export const SocialButtons = ({
   socialNetworks,
   variant = "light",
-}: SocialButtonsType) => {
+}: SocialButtonsProps) => {
   return (
     <S.Wrapper>
       {socialNetworks.map((network) => (

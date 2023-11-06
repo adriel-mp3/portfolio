@@ -1,8 +1,8 @@
 import * as S from "./style";
 
-type LogoProps = {
+interface LogoProps {
   href: string;
-};
+}
 
 export const Logo = ({ href }: LogoProps) => {
   return (
@@ -11,4 +11,3 @@ export const Logo = ({ href }: LogoProps) => {
     </a>
   );
 };
-

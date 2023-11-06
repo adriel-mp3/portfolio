@@ -7,11 +7,11 @@ import { UnderlineButton } from "../Button/UnderlineButton/style";
 
 import * as S from "./style";
 
-type ProjectsType = {
+type ProjectsProps = {
   projectsInfo: ProjectsInfoType[];
 };
 
-const Projects = ({ projectsInfo }: ProjectsType) => {
+const Projects = ({ projectsInfo }: ProjectsProps) => {
   return (
     <S.Container>
       <S.LabelSection>

@@ -8,12 +8,12 @@ import { Tag } from "../Tag/style";
 
 import * as S from "./style";
 
-type HeroPropsType = {
+interface HeroProps {
   socialNetworks: socialNetworksType[];
   skills: SkillsType;
-};
+}
 
-const Hero = ({ socialNetworks, skills }: HeroPropsType) => {
+const Hero = ({ socialNetworks, skills }: HeroProps) => {
   return (
     <>
       <S.Container>

@@ -4,9 +4,9 @@ import type { HeaderLinksType } from "@/utils/headerLinks";
 
 import * as S from "./style";
 
-type HeaderProps = {
+interface HeaderProps {
   headerLinks: HeaderLinksType[];
-};
+}
 
 const Header = ({ headerLinks }: HeaderProps) => {
   return (

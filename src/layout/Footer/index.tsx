@@ -7,9 +7,9 @@ import circle from "@/assets/circle-dec.svg";
 
 import * as S from "./style";
 
-type FooterTypeProps = {
+interface FooterTypeProps {
   socialNetworks: socialNetworksType[];
-};
+}
 
 const Footer = ({ socialNetworks }: FooterTypeProps) => {
   return (
