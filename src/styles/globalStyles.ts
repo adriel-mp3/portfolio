@@ -12,16 +12,15 @@ body {
 
 body::before {
   z-index: -1;
-  filter:${({ theme }) =>
-    `drop-shadow(20px -20px 10px ${theme.colors["accent-100"]}) blur(300px)`} ;
-  display: block;
+  border-radius:50%;
+  box-shadow: 0 0 300px 150px ${({ theme }) => theme.colors["accent-100"]};
   content: '';
   position: fixed;
   width: 500px;
   height: 500px;
-  background: ${({ theme }) => theme.colors["accent-100"]};
-  top: 200px;
-  left: -200px;
+  background: transparent;
+  left: -250px;
+  transform: translate(-50%, -50%)
 }
 
 * {
