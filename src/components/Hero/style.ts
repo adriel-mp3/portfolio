@@ -20,6 +20,14 @@ export const Container = styled.main`
   padding: 0 40px;
   gap: 120px;
   margin-bottom: 120px;
+
+  @media screen and (max-width: 1280px) {
+    gap: 60px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const Resume = styled.div`
@@ -48,6 +56,38 @@ export const Resume = styled.div`
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 20px;
+  }
+
+  @media screen and (max-width: 1280px) {
+    h1,
+    span {
+      font-size: 6rem;
+      line-height: 6rem;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    h1,
+    span {
+      font-size: ${({ theme }) => theme.fontSizes["3xl"]};
+      line-height: 8rem;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    h1,
+    span {
+      font-size: 6rem;
+      line-height: 6rem;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    h1,
+    span {
+      font-size: 4rem;
+      line-height: 4rem;
+    }
   }
 `;
 
@@ -89,6 +129,23 @@ export const Paragraph = styled.p`
   font-size: ${({ theme }) => theme.fontSizes.base};
   max-width: 50ch;
   margin-bottom: 40px;
+
+  @media screen and (max-width: 1280px) {
+    font-size: 1rem;
+    line-height: 1.65rem;
+    max-width: 55ch;
+    margin-bottom: 20px;
+  }
+  @media screen and (max-width: 1024px) {
+    font-size: 1rem;
+    line-height: 1.65rem;
+    max-width: 55ch;
+    margin-bottom: 20px;
+  }
+
+  @media screen and (max-width: 640px) {
+    font-size: 1rem;
+  }
 `;
 
 export const TitleSecondary = styled.h2`
@@ -97,16 +154,26 @@ export const TitleSecondary = styled.h2`
   font-size: ${({ theme }) => theme.fontSizes["2xl"]};
   font-weight: ${({ theme }) => theme.fontWeights.regular};
   margin-bottom: ${({ theme }) => theme.spacing.lg};
+
+  @media screen and (max-width: 1280px) {
+    font-size: ${({ theme }) => theme.fontSizes["xl"]};
+    margin-bottom: ${({ theme }) => theme.spacing.sm};
+  }
 `;
 
 export const Skills = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: ${({ theme }) => theme.spacing.sm};
+  max-width: 650px;
 `;
 
 export const ImgScroll = styled.img`
   margin: 40px auto 0 auto;
   animation: ${rotate} 6s linear infinite;
   user-select: none;
+
+  @media screen and (max-width: 1280px) {
+    display: none;
+  }
 `;

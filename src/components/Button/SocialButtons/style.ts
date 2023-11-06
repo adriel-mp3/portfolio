@@ -12,4 +12,13 @@ export const Wrapper = styled.ul`
     transform: translateY(-4px);
     filter: brightness(120%);
   }
+
+  @media screen and (max-width: 640px) {
+    gap: 20px;
+    
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
 `;
