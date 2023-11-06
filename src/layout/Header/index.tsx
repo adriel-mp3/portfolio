@@ -1,7 +1,8 @@
-import React from "react";
+import { Logo } from "@/components/Logo";
+
+import type { HeaderLinksType } from "@/utils/headerLinks";
+
 import * as S from "./style";
-import { HeaderLinksType } from "@/utils/headerLinks";
-import Logo from "@/components/Logo";
 
 type HeaderProps = {
   headerLinks: HeaderLinksType[];

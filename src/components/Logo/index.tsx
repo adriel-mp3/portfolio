@@ -4,7 +4,7 @@ type LogoProps = {
   href: string;
 };
 
-const Logo = ({ href }: LogoProps) => {
+export const Logo = ({ href }: LogoProps) => {
   return (
     <a href={href}>
       <S.Logo>Adriel Santos</S.Logo>
@@ -12,4 +12,3 @@ const Logo = ({ href }: LogoProps) => {
   );
 };
 
-export default Logo;

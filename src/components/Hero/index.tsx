@@ -1,10 +1,12 @@
-import React from "react";
-import * as S from "./style";
 import scrollDown from "@/assets/scroll-down-circle.svg";
-import { Tag } from "../Tag/style";
-import SocialButtons from "../Button/SocialButtons";
+
 import type { socialNetworksType } from "@/utils/socialNetworks";
 import type { SkillsType } from "@/utils/skills";
+
+import { SocialButtons } from "../Button/SocialButtons";
+import { Tag } from "../Tag/style";
+
+import * as S from "./style";
 
 type HeroPropsType = {
   socialNetworks: socialNetworksType[];

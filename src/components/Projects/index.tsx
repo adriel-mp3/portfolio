@@ -1,9 +1,11 @@
-import React from "react";
-import * as S from "./style";
 import { Tag } from "@/components/Tag/style";
+
+import type { ProjectsInfoType } from "@/utils/projectsInfo";
+
 import { PrimaryButton } from "../Button/PrimmaryButton/style";
 import { UnderlineButton } from "../Button/UnderlineButton/style";
-import type { ProjectsInfoType } from "@/utils/projectsInfo";
+
+import * as S from "./style";
 
 type ProjectsType = {
   projectsInfo: ProjectsInfoType[];

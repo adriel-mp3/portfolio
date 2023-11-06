@@ -1,8 +1,11 @@
-import * as S from "./style";
-import circle from "@/assets/circle-dec.svg";
 import { PrimaryButton } from "@/components/Button/PrimmaryButton/style";
-import SocialButtons from "@/components/Button/SocialButtons";
+import { SocialButtons } from "@/components/Button/SocialButtons";
+
 import type { socialNetworksType } from "@/utils/socialNetworks";
+
+import circle from "@/assets/circle-dec.svg";
+
+import * as S from "./style";
 
 type FooterTypeProps = {
   socialNetworks: socialNetworksType[];
