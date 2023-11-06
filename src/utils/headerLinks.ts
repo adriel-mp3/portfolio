@@ -6,6 +6,10 @@ export type HeaderLinksType = {
 export const headerLinks = [
   {
     href: "#",
+    label: "Sobre",
+  },
+  {
+    href: "#",
     label: "Projetos",
   },
   {

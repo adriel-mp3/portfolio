@@ -7,6 +7,10 @@ export const Container = styled.header`
   max-width: 1440px;
   margin: 40px auto 120px auto;
   padding: 0 40px;
+
+  @media screen and (max-width: 768px) {
+    margin: 40px auto 60px auto;
+  }
 `;
 
 export const NavLinks = styled.ul`
@@ -14,7 +18,7 @@ export const NavLinks = styled.ul`
   gap: ${({ theme }) => theme.spacing["2xl"]};
   font-size: ${({ theme }) => theme.fontSizes.base};
   color: ${({ theme }) => theme.colors["neutral-300"]};
-  
+
   li > a {
     transition: 0.3s;
     &:hover {
