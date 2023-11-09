@@ -63,7 +63,7 @@ export const Project = styled.div`
   backdrop-filter: blur(20px);
   padding: 40px;
   border-radius: 12px;
-  box-shadow: 0px -px 4px 0px rgba(255, 255, 255, 0.05) inset;
+  box-shadow: 0px -2px 4px 0px rgba(255, 255, 255, 0.05) inset;
 
   h3,
   ul,
