@@ -21,7 +21,7 @@ const Footer = ({ socialNetworks }: FooterTypeProps) => {
           <span>Feito com ❤️ por Adriel Santos</span>
         </S.Contact>
         <S.Social>
-          <img src={circle} />
+          <img src={circle} alt=""/>
           <SocialButtons socialNetworks={socialNetworks} variant="dark" />
         </S.Social>
       </S.Container>
