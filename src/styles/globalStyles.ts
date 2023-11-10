@@ -27,7 +27,15 @@ body {
   -webkit-font-smoothing: antialiased;
   -webkit-tap-highlight-color: transparent;
   background: ${({ theme }) => theme.colors.background};
-  font-family: "Fira Sans";
+  font-family: "Fira Sans"; 
+}
+
+button, a {
+  &:focus {
+    outline-color: ${({ theme }) => theme.colors["accent-200"]};
+    outline-offset: 4px;
+    transition: none;
+  }
 }
 
 body::before {
@@ -39,8 +47,9 @@ body::before {
   height: 600px;
   left: -300px;
   transform: translate(-50%, -50%);
-  animation: ${breathing} 10s infinite ease;
+  animation: ${breathing} 15s infinite ease;
   will-change: box-shadow;
+  opacity: 0.6;
 }
 
 
