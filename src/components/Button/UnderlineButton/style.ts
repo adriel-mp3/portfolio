@@ -35,7 +35,7 @@ export const UnderlineButton = styled.button<UnderlineButton>`
   transition: 0.3s;
 
   &:hover {
-    color: ${({ theme }) => theme.colors["accent-500"]};
-    border-color: ${({ theme }) => theme.colors["accent-500"]};
+    color: ${({ theme }) => theme.colors["accent-200"]};
+    border-color: ${({ theme }) => theme.colors["accent-200"]};
   }
 `;
