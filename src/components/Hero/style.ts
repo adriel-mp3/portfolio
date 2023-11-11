@@ -28,6 +28,10 @@ export const Container = styled.main`
   @media screen and (max-width: 1024px) {
     grid-template-columns: 1fr;
   }
+
+  @media screen and (max-width: 640px) {
+    padding: 0 20px;
+  }
 `;
 
 export const Resume = styled.div`
@@ -47,6 +51,14 @@ export const Resume = styled.div`
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-left: -10px;
+
+    @media screen and (max-width: 1280px) {
+      margin-left: -5px;
+    }
+
+    @media screen and (max-width: 640px) {
+      margin-left: 0px;
+    }
   }
 
   span {
@@ -85,8 +97,8 @@ export const Resume = styled.div`
   @media screen and (max-width: 640px) {
     h1,
     span {
-      font-size: 4rem;
-      line-height: 4rem;
+      font-size: 3.5rem;
+      line-height: 3.5rem;
     }
   }
 `;
@@ -119,6 +131,13 @@ export const SideInfo = styled.div`
 
     strong {
       color: ${({ theme }) => theme.colors["accent-400"]};
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    h2:first-of-type::after,
+    h2:last-of-type::after {
+      background-size: 30px;
     }
   }
 `;
@@ -159,6 +178,10 @@ export const TitleSecondary = styled.h2`
     font-size: ${({ theme }) => theme.fontSizes["xl"]};
     margin-bottom: ${({ theme }) => theme.spacing.sm};
   }
+
+  @media screen and (max-width: 768px) {
+    font-size: 2rem;
+  }
 `;
 
 export const Skills = styled.div`
@@ -166,6 +189,14 @@ export const Skills = styled.div`
   flex-wrap: wrap;
   gap: ${({ theme }) => theme.spacing.sm};
   max-width: 650px;
+
+  @media screen and (max-width: 1280px) {
+    max-width: 450px;
+  }
+
+  @media screen and (max-width: 640px) {
+    max-width: 400px;
+  }
 `;
 
 export const ImgScroll = styled.img`
