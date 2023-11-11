@@ -8,4 +8,8 @@ export const Tag = styled.span`
   background: ${({ theme }) => theme.colors["accent-100"]};
   color: ${({ theme }) => theme.colors["accent-500"]};
   font-weight: ${({ theme }) => theme.fontWeights.semiBold};
+
+  @media screen and (max-width:768px) {
+    font-size: ${({theme}) => theme.fontSizes.xs};
+  }
 `;
