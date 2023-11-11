@@ -13,7 +13,7 @@ interface FooterTypeProps {
 
 const Footer = ({ socialNetworks }: FooterTypeProps) => {
   return (
-    <S.Background>
+    <S.Background id="contact">
       <S.Container>
         <S.Contact>
           <p>Entre em contato comigo e marcamos uma conversa.</p>

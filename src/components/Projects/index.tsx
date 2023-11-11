@@ -13,7 +13,7 @@ type ProjectsProps = {
 
 const Projects = ({ projectsInfo }: ProjectsProps) => {
   return (
-    <S.Container>
+    <S.Container id="projects">
       <S.LabelSection>
         <h2>Projetos</h2>
         <p>Veja no que eu ando trabalhando</p>

@@ -16,7 +16,7 @@ interface HeroProps {
 const Hero = ({ socialNetworks, skills }: HeroProps) => {
   return (
     <>
-      <S.Container>
+      <S.Container id="about">
         <S.Resume>
           <h1>Front-end</h1>
           <span>Developer</span>
