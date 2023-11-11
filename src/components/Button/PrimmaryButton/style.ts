@@ -30,7 +30,7 @@ export const PrimaryButton = styled.button<PrimaryButtonProps>`
   display: block;
   max-width: fit-content;
   padding: 12px 24px;
-  border-radius: 7px;
+  border-radius: 8px;
   font-family: "Fira Sans";
   font-weight: ${({ theme }) => theme.fontWeights.semiBold};
   font-size: ${({ theme }) => theme.fontSizes.base};
@@ -40,5 +40,10 @@ export const PrimaryButton = styled.button<PrimaryButtonProps>`
 
   &:hover {
     filter: brightness(120%);
+  }
+
+  @media screen and (max-width: 1024px) {
+    font-size: ${({ theme }) => theme.fontSizes.sm};
+    padding: 10px 20px;
   }
 `;
