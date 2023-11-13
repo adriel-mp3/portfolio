@@ -186,7 +186,7 @@ export const TitleSecondary = styled.h2`
   }
 `;
 
-export const Skills = styled.div`
+export const Skills = styled.ul`
   display: flex;
   flex-wrap: wrap;
   gap: ${({ theme }) => theme.spacing.sm};
