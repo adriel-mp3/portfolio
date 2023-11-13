@@ -41,11 +41,11 @@ const Projects = ({ projectsInfo }: ProjectsProps) => {
                 Repositório
               </UnderlineButton>
             </S.Buttons>
-            <ul>
-              {project.tags.map((tag) => (
+            {project.tags.map((tag) => (
+              <ul>
                 <Tag as="li">{tag}</Tag>
-              ))}
-            </ul>
+              </ul>
+            ))}
           </S.Project>
         ))}
       </S.Projects>
