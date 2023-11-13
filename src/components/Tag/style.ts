@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { device } from "@/styles/mediaQueries";
+
 export const Tag = styled.span`
   display: block;
   width: fit-content;
@@ -8,4 +10,8 @@ export const Tag = styled.span`
   background: ${({ theme }) => theme.colors["accent-100"]};
   color: ${({ theme }) => theme.colors["accent-500"]};
   font-weight: ${({ theme }) => theme.fontWeights.semiBold};
+
+  @media ${device.md} {
+    font-size: ${({ theme }) => theme.fontSizes.xs};
+  }
 `;

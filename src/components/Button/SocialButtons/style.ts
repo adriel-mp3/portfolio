@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { device } from "@/styles/mediaQueries";
+
 export const Wrapper = styled.ul`
   display: flex;
   gap: ${({ theme }) => theme.spacing.xl};
@@ -13,9 +15,9 @@ export const Wrapper = styled.ul`
     filter: brightness(120%);
   }
 
-  @media screen and (max-width: 640px) {
+  @media ${device.sm} {
     gap: 20px;
-    
+
     img {
       width: 30px;
       height: 30px;

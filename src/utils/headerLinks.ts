@@ -5,15 +5,15 @@ export type HeaderLinksType = {
 
 export const headerLinks = [
   {
-    href: "#",
+    href: "#about",
     label: "Sobre",
   },
   {
-    href: "#",
+    href: "#projects",
     label: "Projetos",
   },
   {
-    href: "#",
+    href: "#contact",
     label: "Contato",
   },
 ] as HeaderLinksType[];

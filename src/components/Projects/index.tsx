@@ -1,17 +1,19 @@
-import React from "react";
-import * as S from "./style";
 import { Tag } from "@/components/Tag/style";
-import { PrimaryButton } from "../Button/PrimmaryButton/style";
-import { UnderlineButton } from "../Button/UnderlineButton/style";
+
 import type { ProjectsInfoType } from "@/utils/projectsInfo";
 
-type ProjectsType = {
+import { PrimaryButton } from "../Button/PrimmaryButton/style";
+import { UnderlineButton } from "../Button/UnderlineButton/style";
+
+import * as S from "./style";
+
+type ProjectsProps = {
   projectsInfo: ProjectsInfoType[];
 };
 
-const Projects = ({ projectsInfo }: ProjectsType) => {
+const Projects = ({ projectsInfo }: ProjectsProps) => {
   return (
-    <S.Container>
+    <S.Container id="projects">
       <S.LabelSection>
         <h2>Projetos</h2>
         <p>Veja no que eu ando trabalhando</p>

@@ -1,18 +1,18 @@
-import React from "react";
-import * as S from "./style";
 import type { socialNetworksType } from "@/utils/socialNetworks";
+
+import * as S from "./style";
 
 type SocialButtonsVariants = "dark" | "light";
 
-type SocialButtonsType = {
+interface SocialButtonsProps {
   socialNetworks: socialNetworksType[];
   variant?: SocialButtonsVariants;
-};
+}
 
-const SocialButtons = ({
+export const SocialButtons = ({
   socialNetworks,
   variant = "light",
-}: SocialButtonsType) => {
+}: SocialButtonsProps) => {
   return (
     <S.Wrapper>
       {socialNetworks.map((network) => (
@@ -27,5 +27,3 @@ const SocialButtons = ({
     </S.Wrapper>
   );
 };
-
-export default SocialButtons;

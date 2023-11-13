@@ -1,11 +1,12 @@
-import React from "react";
-import * as S from "./style";
-import { HeaderLinksType } from "@/utils/headerLinks";
-import Logo from "@/components/Logo";
+import { Logo } from "@/components/Logo";
 
-type HeaderProps = {
+import type { HeaderLinksType } from "@/utils/headerLinks";
+
+import * as S from "./style";
+
+interface HeaderProps {
   headerLinks: HeaderLinksType[];
-};
+}
 
 const Header = ({ headerLinks }: HeaderProps) => {
   return (

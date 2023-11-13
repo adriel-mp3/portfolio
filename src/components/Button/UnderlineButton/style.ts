@@ -29,13 +29,13 @@ export const UnderlineButton = styled.button<UnderlineButton>`
   ${(props) =>
     props.$size ? BUTTON_SIZES[props.$size] : BUTTON_SIZES["default"]}
   cursor: pointer;
-  color: ${({ theme }) => theme.colors["neutral-300"]};
+  color: ${({ theme }) => theme.colors["neutral-400"]};
   border-bottom-style: solid;
-  border-color: ${({ theme }) => theme.colors["neutral-300"]};
+  border-color: ${({ theme }) => theme.colors["neutral-400"]};
   transition: 0.3s;
 
   &:hover {
-    color: ${({ theme }) => theme.colors["accent-500"]};
-    border-color: ${({ theme }) => theme.colors["accent-500"]};
+    color: ${({ theme }) => theme.colors["accent-200"]};
+    border-color: ${({ theme }) => theme.colors["accent-200"]};
   }
 `;

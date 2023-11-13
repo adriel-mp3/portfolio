@@ -1,5 +1,7 @@
 import styled, { css } from "styled-components";
 
+import { device } from "@/styles/mediaQueries";
+
 type ButtonVariants = "dark" | "light";
 
 export type PrimaryButtonProps = {
@@ -30,7 +32,7 @@ export const PrimaryButton = styled.button<PrimaryButtonProps>`
   display: block;
   max-width: fit-content;
   padding: 12px 24px;
-  border-radius: 7px;
+  border-radius: 8px;
   font-family: "Fira Sans";
   font-weight: ${({ theme }) => theme.fontWeights.semiBold};
   font-size: ${({ theme }) => theme.fontSizes.base};
@@ -40,5 +42,10 @@ export const PrimaryButton = styled.button<PrimaryButtonProps>`
 
   &:hover {
     filter: brightness(120%);
+  }
+
+  @media ${device.lg} {
+    font-size: ${({ theme }) => theme.fontSizes.sm};
+    padding: 10px 20px;
   }
 `;
