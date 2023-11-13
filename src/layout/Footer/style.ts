@@ -1,5 +1,7 @@
 import styled, { keyframes } from "styled-components";
 
+import { device } from "@/styles/mediaQueries";
+
 const pulse = keyframes`
   20% {
     transform: scale(1);
@@ -37,11 +39,11 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-between;
 
-  @media screen and (max-width: 768px) {
+  @media ${device.md} {
     display: block;
   }
 
-  @media screen and (max-width: 640px) {
+  @media ${device.sm} {
     padding: 48px 20px;
   }
 `;
@@ -54,13 +56,13 @@ export const Contact = styled.div`
     margin-bottom: ${({ theme }) => theme.spacing.lg};
   }
 
-  @media screen and (max-width: 1024px) {
+  @media ${device.lg} {
     p {
       font-size: ${({ theme }) => theme.fontSizes.xl};
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @media ${device.md} {
     p {
       font-size: 2rem;
     }
@@ -72,7 +74,7 @@ export const Social = styled.div`
     margin-bottom: ${({ theme }) => theme.spacing.lg};
   }
 
-  @media screen and (max-width: 768px) {
+  @media ${device.md} {
     & > img {
       display: none;
     }
@@ -85,15 +87,15 @@ export const Copyright = styled.span`
   flex-wrap: wrap;
   gap: 2px;
   color: ${({ theme }) => theme.colors.background};
-      font-size: ${({ theme }) => theme.fontSizes.sm};
+  font-size: ${({ theme }) => theme.fontSizes.sm};
 
   margin-top: ${({ theme }) => theme.spacing.lg};
 
-  @media screen and (max-width: 1024px) {
+  @media ${device.lg} {
     margin-bottom: 60px;
   }
 
-  @media screen and (max-width: 768px) {
+  @media ${device.md} {
     margin-bottom: 20px;
   }
 `;

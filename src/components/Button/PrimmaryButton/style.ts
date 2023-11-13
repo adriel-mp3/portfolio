@@ -1,5 +1,7 @@
 import styled, { css } from "styled-components";
 
+import { device } from "@/styles/mediaQueries";
+
 type ButtonVariants = "dark" | "light";
 
 export type PrimaryButtonProps = {
@@ -42,7 +44,7 @@ export const PrimaryButton = styled.button<PrimaryButtonProps>`
     filter: brightness(120%);
   }
 
-  @media screen and (max-width: 1024px) {
+  @media ${device.lg} {
     font-size: ${({ theme }) => theme.fontSizes.sm};
     padding: 10px 20px;
   }

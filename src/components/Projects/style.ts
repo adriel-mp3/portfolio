@@ -1,11 +1,13 @@
 import styled from "styled-components";
 
+import { device } from "@/styles/mediaQueries";
+
 export const Container = styled.section`
   max-width: 1440px;
   padding: 0 40px;
   margin: 120px auto 120px auto;
 
-  @media screen and (max-width:640px) {
+  @media ${device.sm} {
     padding: 0 20px;
   }
 `;
@@ -32,7 +34,7 @@ export const LabelSection = styled.div`
     margin-left: 5px;
   }
 
-  @media screen and (max-width: 1280px) {
+  @media ${device.xl} {
     flex-wrap: wrap;
 
     h2 {
@@ -41,11 +43,11 @@ export const LabelSection = styled.div`
     }
   }
 
-  @media screen and (max-width: 1024px) {
+  @media ${device.lg} {
     margin-bottom: 60px;
   }
 
-  @media screen and (max-width: 640px) {
+  @media ${device.sm} {
     h2 {
       font-size: 4rem;
       line-height: 4rem;
@@ -59,7 +61,7 @@ export const Projects = styled.div`
   gap: 40px;
   margin-bottom: 120px;
 
-  @media screen and (max-width: 1280px) {
+  @media ${device.xl} {
     grid-template-columns: 1fr;
   }
 `;
@@ -97,14 +99,14 @@ export const Project = styled.div`
     font-size: ${({ theme }) => theme.fontSizes.base};
   }
 
-  @media screen and (max-width: 1024px) {
+  @media ${device.lg} {
     p {
       font-size: ${({ theme }) => theme.fontSizes.sm};
       line-height: 1.75rem;
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @media ${device.md} {
     padding: 20px;
     h3 {
       font-size: 2rem;
@@ -120,7 +122,7 @@ export const Buttons = styled.div`
   align-items: center;
   margin-bottom: 40px;
 
-  @media screen and (max-width: 640px) {
+  @media ${device.sm} {
     gap: 20px;
     a {
       font-size: 1rem;

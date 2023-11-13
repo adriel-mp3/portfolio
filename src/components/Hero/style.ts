@@ -1,7 +1,8 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
 import brain from "@/assets/brain.svg";
 import trophy from "@/assets/trophy.svg";
-import { keyframes } from "styled-components";
+import { device } from "@/styles/mediaQueries";
 
 const rotate = keyframes`
 0% {
@@ -11,6 +12,7 @@ const rotate = keyframes`
     transform: rotate(0);
 	}
 `;
+
 export const Container = styled.main`
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -21,15 +23,15 @@ export const Container = styled.main`
   gap: 120px;
   margin-bottom: 120px;
 
-  @media screen and (max-width: 1280px) {
+  @media ${device.xl} {
     gap: 60px;
   }
 
-  @media screen and (max-width: 1024px) {
+  @media ${device.lg} {
     grid-template-columns: 1fr;
   }
 
-  @media screen and (max-width: 640px) {
+  @media ${device.sm} {
     padding: 0 20px;
   }
 `;
@@ -52,11 +54,11 @@ export const Resume = styled.div`
     -webkit-text-fill-color: transparent;
     margin-left: -10px;
 
-    @media screen and (max-width: 1280px) {
+    @media ${device.xl} {
       margin-left: -5px;
     }
 
-    @media screen and (max-width: 640px) {
+    @media ${device.sm} {
       margin-left: 0px;
     }
   }
@@ -70,7 +72,7 @@ export const Resume = styled.div`
     margin-bottom: 20px;
   }
 
-  @media screen and (max-width: 1280px) {
+  @media ${device.xl} {
     h1,
     span {
       font-size: 6rem;
@@ -78,7 +80,7 @@ export const Resume = styled.div`
     }
   }
 
-  @media screen and (max-width: 1024px) {
+  @media ${device.lg} {
     h1,
     span {
       font-size: ${({ theme }) => theme.fontSizes["3xl"]};
@@ -86,7 +88,7 @@ export const Resume = styled.div`
     }
   }
 
-  @media screen and (max-width: 1024px) {
+  @media ${device.lg} {
     h1,
     span {
       font-size: 6rem;
@@ -94,7 +96,7 @@ export const Resume = styled.div`
     }
   }
 
-  @media screen and (max-width: 640px) {
+  @media ${device.sm} {
     h1,
     span {
       font-size: 3.5rem;
@@ -134,7 +136,7 @@ export const SideInfo = styled.div`
     }
   }
 
-  @media screen and (max-width: 640px) {
+  @media ${device.sm} {
     h2:first-of-type::after,
     h2:last-of-type::after {
       background-size: 30px;
@@ -149,20 +151,20 @@ export const Paragraph = styled.p`
   max-width: 50ch;
   margin-bottom: 40px;
 
-  @media screen and (max-width: 1280px) {
+  @media ${device.xl} {
     font-size: 1rem;
     line-height: 1.65rem;
     max-width: 55ch;
     margin-bottom: 20px;
   }
-  @media screen and (max-width: 1024px) {
+  @media ${device.lg} {
     font-size: 1rem;
     line-height: 1.65rem;
     max-width: 55ch;
     margin-bottom: 20px;
   }
 
-  @media screen and (max-width: 640px) {
+  @media ${device.sm} {
     font-size: 1rem;
   }
 `;
@@ -174,12 +176,12 @@ export const TitleSecondary = styled.h2`
   font-weight: ${({ theme }) => theme.fontWeights.regular};
   margin-bottom: ${({ theme }) => theme.spacing.lg};
 
-  @media screen and (max-width: 1280px) {
+  @media ${device.xl} {
     font-size: ${({ theme }) => theme.fontSizes["xl"]};
     margin-bottom: ${({ theme }) => theme.spacing.sm};
   }
 
-  @media screen and (max-width: 768px) {
+  @media ${device.md} {
     font-size: 2rem;
   }
 `;
@@ -190,11 +192,11 @@ export const Skills = styled.div`
   gap: ${({ theme }) => theme.spacing.sm};
   max-width: 650px;
 
-  @media screen and (max-width: 1280px) {
+  @media ${device.xl} {
     max-width: 450px;
   }
 
-  @media screen and (max-width: 640px) {
+  @media ${device.sm} {
     max-width: 400px;
   }
 `;
@@ -204,7 +206,7 @@ export const ImgScroll = styled.img`
   animation: ${rotate} 6s linear infinite;
   user-select: none;
 
-  @media screen and (max-width: 1280px) {
+  @media ${device.xl} {
     display: none;
   }
 `;
