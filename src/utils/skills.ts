@@ -4,8 +4,6 @@ export const skills = [
   "React",
   "TypeScript",
   "Next.JS",
-  "GraphQL",
-  "Apollo",
   "Styled Components",
   "Tailwind",
   "SASS",
@@ -17,4 +15,6 @@ export const skills = [
   "Storybook",
   "Jest",
   "Testing Library",
+  "Scrum",
+  "Metodologias Ágeis"
 ] as SkillsType;
