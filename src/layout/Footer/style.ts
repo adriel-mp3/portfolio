@@ -29,7 +29,7 @@ const pulse = keyframes`
 }`;
 
 export const Background = styled.footer`
-  background: ${({ theme }) => theme.colors["accent-200"]};
+  background: ${({ theme }) => theme.colors["accent-100"]};
 `;
 
 export const Container = styled.div`
@@ -50,7 +50,7 @@ export const Container = styled.div`
 
 export const Contact = styled.div`
   p {
-    color: ${({ theme }) => theme.colors["neutral-400"]};
+    color: ${({ theme }) => theme.colors["neutral-100"]};
     font-size: ${({ theme }) => theme.fontSizes["2xl"]};
     max-width: 20ch;
     margin-bottom: ${({ theme }) => theme.spacing.lg};
@@ -86,7 +86,7 @@ export const Copyright = styled.span`
   align-items: center;
   flex-wrap: wrap;
   gap: 2px;
-  color: ${({ theme }) => theme.colors.background};
+  color: ${({ theme }) => theme.colors["neutral-400"]};
   font-size: ${({ theme }) => theme.fontSizes.sm};
 
   margin-top: ${({ theme }) => theme.spacing.lg};
