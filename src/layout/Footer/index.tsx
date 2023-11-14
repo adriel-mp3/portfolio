@@ -18,10 +18,12 @@ const Footer = ({ socialNetworks }: FooterTypeProps) => {
         <S.Contact>
           <p>Entre em contato comigo e marcamos uma conversa.</p>
           <PrimaryButton $variant="dark">Enviar e-mail</PrimaryButton>
-          <S.Copyright>Feito com <S.Heart>❤️</S.Heart> por Adriel Santos</S.Copyright>
+          <S.Copyright>
+            Feito com <S.Heart>❤️</S.Heart> por Adriel Santos
+          </S.Copyright>
         </S.Contact>
         <S.Social>
-          <img src={circle} alt=""/>
+          <img src={circle} alt="" width={193} height={191} />
           <SocialButtons socialNetworks={socialNetworks} variant="dark" />
         </S.Social>
       </S.Container>

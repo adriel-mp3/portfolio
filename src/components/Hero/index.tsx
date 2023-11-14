@@ -46,7 +46,7 @@ const Hero = ({ socialNetworks, skills }: HeroProps) => {
           </S.Skills>
         </S.SideInfo>
       </S.Container>
-      <S.ImgScroll src={scrollDown} alt="" />
+      <S.ImgScroll src={scrollDown} alt="" width={116} height={116}/>
     </>
   );
 };

@@ -20,7 +20,12 @@ export const SocialButtons = ({
           <a
             href={network.address ? `mailto:${network.address}` : network.link}
           >
-            <img src={network.icon[variant]} alt={network.alt} />
+            <img
+              src={network.icon[variant]}
+              alt={network.alt}
+              width={40}
+              height={40}
+            />
           </a>
         </li>
       ))}

@@ -20,7 +20,7 @@ const Projects = ({ projectsInfo }: ProjectsProps) => {
       </S.LabelSection>
       <S.Projects>
         {projectsInfo.map((project) => (
-          <S.Project>
+          <S.Project key={project.name}>
             <h3>{project.name}</h3>
             <p>{project.description}</p>
             <S.Buttons>
@@ -43,7 +43,9 @@ const Projects = ({ projectsInfo }: ProjectsProps) => {
             </S.Buttons>
             <ul>
               {project.tags.map((tag) => (
-                <Tag as="li">{tag}</Tag>
+                <Tag as="li" key={`${project.name}-${tag}`}>
+                  {tag}
+                </Tag>
               ))}
             </ul>
           </S.Project>

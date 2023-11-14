@@ -3,24 +3,43 @@ import { Logo } from "@/components/Logo";
 import type { HeaderLinksType } from "@/utils/headerLinks";
 
 import * as S from "./style";
+import { useHeader } from "@/hooks/useHeader";
 
 interface HeaderProps {
   headerLinks: HeaderLinksType[];
 }
 
 const Header = ({ headerLinks }: HeaderProps) => {
+  const { isMenuOpen, isViewportMobile, toggleMenu, smoothScrollToSection } =
+    useHeader();
+
   return (
     <S.Container>
       <Logo href="#" />
-      <nav>
+      <S.MenuButton
+        $isMenuOpen={isMenuOpen}
+        onClick={toggleMenu}
+        type="button"
+        aria-label={isMenuOpen ? "Abrir Menu" : "Fechar Menu"}
+        aria-haspopup="true"
+        aria-controls="menu"
+        aria-expanded={isMenuOpen && isViewportMobile}
+      >
+        <div></div>
+        <div></div>
+        <div></div>
+      </S.MenuButton>
+      <S.Navigation $isMenuOpen={isMenuOpen && isViewportMobile}>
         <S.NavLinks>
           {headerLinks.map((link) => (
-            <li>
-              <a href={link.href}>{link.label}</a>
+            <li key={link.id}>
+              <a onClick={smoothScrollToSection} href={link.href} id={link.id}>
+                {link.label}
+              </a>
             </li>
           ))}
         </S.NavLinks>
-      </nav>
+      </S.Navigation>
     </S.Container>
   );
 };
