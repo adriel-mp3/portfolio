@@ -10,7 +10,7 @@ Para visualizar meu portfólio basta acessar: <a href="https://portfolio-adriel-
 
 Certifique-se que você já tem no Node instalado em sua maquina e rode o seguinte comando em seu terminal
 
-<pre>git clone https://github.com/adriel-mp3/challenge-uniondevelopers.git</pre>
+<pre>git clone https://github.com/adriel-mp3/portfolio.git</pre>
 
 Instale as dependencias do projeto:
 
