@@ -1,9 +1,10 @@
 import { Logo } from "@/components/Logo";
 
+import { useHeader } from "@/hooks/useHeader";
+
 import type { HeaderLinksType } from "@/utils/headerLinks";
 
 import * as S from "./style";
-import { useHeader } from "@/hooks/useHeader";
 
 interface HeaderProps {
   headerLinks: HeaderLinksType[];
