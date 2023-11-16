@@ -1,4 +1,4 @@
-import scrollDown from "@/assets/scroll-down-circle.svg";
+import scrollDown from "/scroll-down-circle.svg";
 
 import type { socialNetworksType } from "@/utils/socialNetworks";
 import type { SkillsType } from "@/utils/skills";
