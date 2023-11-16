@@ -1,9 +1,9 @@
-import githubIconLight from "@/assets/github.svg";
-import linkedinIconLight from "@/assets/linkedin.svg";
-import inboxIconLight from "@/assets/inbox.svg";
-import linkedinIconDark from "@/assets/linkedin-dark.svg";
-import githubIconDark from "@/assets/github-dark.svg";
-import inboxIconDark from "@/assets/inbox-dark.svg";
+import githubIconLight from "/github.svg";
+import linkedinIconLight from "/linkedin.svg";
+import inboxIconLight from "/inbox.svg";
+import linkedinIconDark from "/linkedin-dark.svg";
+import githubIconDark from "/github-dark.svg";
+import inboxIconDark from "/inbox-dark.svg";
 
 type socialIconsType = {
   dark: string;

@@ -1,7 +1,7 @@
 import styled, { keyframes } from "styled-components";
 
-import brain from "@/assets/brain.svg";
-import trophy from "@/assets/trophy.svg";
+import brain from "/brain.svg";
+import trophy from "/trophy.svg";
 import { device } from "@/styles/mediaQueries";
 
 const rotate = keyframes`
