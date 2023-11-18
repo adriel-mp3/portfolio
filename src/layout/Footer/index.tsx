@@ -3,7 +3,7 @@ import { SocialButtons } from "@/components/Button/SocialButtons";
 
 import type { socialNetworksType } from "@/utils/socialNetworks";
 
-import circle from "@/assets/circle-dec.svg";
+import circle from "/circle-dec.svg";
 
 import * as S from "./style";
 
