@@ -16,7 +16,7 @@ const Footer = ({ socialNetworks }: FooterTypeProps) => {
     <S.Background id="contact">
       <S.Container>
         <S.Contact>
-          <p>Entre em contato comigo e marcamos uma conversa.</p>
+          <p>Entre em contato comigo para marcarmos uma conversa.</p>
           <PrimaryButton $variant="dark">Enviar e-mail</PrimaryButton>
           <S.Copyright>
             Feito com <S.Heart>❤️</S.Heart> por Adriel Santos
