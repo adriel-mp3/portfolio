@@ -33,7 +33,7 @@ const Hero = ({ socialNetworks, skills }: HeroProps) => {
           <S.Paragraph>
             Minha ultima experiência foi como{' '}
             <strong>Desenvolvedor Front-end</strong> na Union Developers, onde
-            estava imerso em um ambiente de aprendizado contínuo. Adquirindo
+            estava imerso em um ambiente de aprendizado contínuo. Durante essa atuação, adquiri
             experiência em
             <strong> metodologias ágeis</strong>, padrões de projeto, fluxo de
             trabalho no GitHub e <strong>trabalho em equipe</strong>.
