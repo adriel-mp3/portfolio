@@ -18,7 +18,7 @@ export const projectsInfo = [
   {
     name: "Events",
     description:
-      "Você pode ter acesso a palestras e eventos em todos os dispositivos, além de poder comprar ingressos. A plataforma está disponível para todas as plataformas.",
+      "Você pode ter acesso às palestras e eventos em todos os dispositivos, além de poder comprar ingressos. O site está disponível para todas as plataformas.",
     tags: ["Tailwind", "React", "JavaScript", "React Router"],
     repository: "https://github.com/adriel-mp3/events",
     deploy: "",
@@ -34,7 +34,7 @@ export const projectsInfo = [
   {
     name: "Meu Portfólio",
     description:
-      "O objetivo deste é apresentar as principais informações da minha carreira como desenvolvedor de forma simples e didática. Está disponível para todos os dispositivos.",
+      "O objetivo deste é apresentar as principais informações da minha carreira como desenvolvedor, de forma simples e didática. Está disponível para todos os dispositivos.",
     tags: ["Styled Components", "React", "TypeScript", "Figma"],
     repository: "https://github.com/adriel-mp3/portfolio",
     deploy: "",
